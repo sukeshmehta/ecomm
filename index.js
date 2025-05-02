@@ -1,0 +1,32 @@
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config();
+import cookieParser from "cookie-parser";
+import morgan from "morgan";
+import helmet from "helmet";
+
+const app = express();
+app.use(cors());
+app.options("*", cors());
+
+app.use(express.json());
+app.use(cookieParser());
+app.use(morgan());
+app.use(
+  helmet({
+    crossOriginEmbedderPolicy: false,
+  })
+);
+
+app.get("/", (request, response) => {
+  response.json({
+    message: "server is running on Port" + process.env.PORT,
+  });
+});
+
+connectDB().then(() => {
+  app.listen(process.env.PORT, () => {
+    console.log("server is running", process.env.PORT);
+  });
+});
