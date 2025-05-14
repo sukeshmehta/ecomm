@@ -1,0 +1,20 @@
+.productItem .title {
+  line-height: 22px;
+}
+
+.productItem .discount {
+  background-color: #f88a8a;
+  border-radius: 15px;
+}
+
+.productItem .MuiButton-root:hover {
+  background: #f88a8a;
+  border-radius: 20px;
+  color: beige;
+}
+
+.productItem .MuiButton-root {
+  background: gray;
+  color: white;
+  border-radius: 20px;
+}

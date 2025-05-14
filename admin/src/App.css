@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar {
+  width: 10px !important;
+  height: 10px !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ccc !important;
+}
+
+.MuiBadge-badge {
+  background: rgb(238, 180, 192) !important;
+  color: rgb(81, 91, 134) !important;
+}
+
+.ReactCollapse--collapse {
+  transition: height 300ms;
+}
+.btn svg {
+  font-size: 20px;
+}
+.btn {
+  padding: 8px 20px !important;
+}
+.btn-blue {
+  background: #4872fa !important;
+  color: #fff !important;
+  padding: 8px 20px !important;
+}
+.btn-blue:hover {
+  background: #0b38cf !important;
+}
+.btn-sm {
+  padding: 6px 13px !important;
+  font-size: 13px !important;
+}
+.btn-sm {
+  padding: 8px 16px !important;
+  font-size: 13px !important;
+}
+th.MuiTableCell-root {
+  background: #f1f1f1;
+}
+
+a.active button {
+  background: #dcdcdc !important;
+}
+
+.MuiButton-icon svg {
+  font-size: 27px !important;
+}
+
+.css-rizt0-MuiTypography-root {
+  font-size: 22px;
+}
+
+.MuiAppBar-colorPrimary {
+  background: #e6e6e6 !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.MuiDialog-paper {
+  background: #f9fafb !important;
+}
+
+.otpBox input {
+  border: 1px solid rgba(0, 0, 0, 0.3) !important;
+  outline: none !important;
+  border-radius: 4px;
+}
+.otpBox input:focus {
+  border: 1px solid rgba(0, 0, 0, 0.7) !important;
+}
+.otpPage .container {
+  height: 90vh;
+  display: flex;
+}
+
+.MuiTableBody-root tr:nth-child(even) {
+  background-color: theme("colors.gray.300");
+}
