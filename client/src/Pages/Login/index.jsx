@@ -55,24 +55,24 @@ const Login = () => {
     }
 
     postData("/api/user/login", formFields, { withCredentials: true }).then(
-      (res) => {
-        console.log(res);
-        if (res?.error !== true) {
+      (response) => {
+        console.log(response);
+        if (response?.error !== true) {
           setIsLoading(false);
-          context.alertBox("success", res?.message);
+          context.alertBox("success", response?.message);
           setFormFields({
             email: "",
             password: "",
           });
 
-          localStorage.setItem("accesstoken", res?.data?.accesstoken);
-          localStorage.setItem("refreshToken", res?.data?.refreshToken);
+          localStorage.setItem("accesstoken", response?.data?.accesstoken);
+          localStorage.setItem("refreshToken", response?.data?.refreshToken);
 
           context.setIsLogin(true);
 
           history("/");
         } else {
-          context.alertBox("error", res?.message);
+          context.alertBox("error", response?.message);
           setIsLoading(false);
         }
       }
